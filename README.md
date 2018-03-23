@@ -9,6 +9,7 @@
 # 学习路线
 
 - [《JavaScript 闯关记》](https://github.com/stone0090/javascript-lessons)
+- [javascript学习笔记](https://github.com/zhubangbang/zhubangbang-javascript-notes)
 
 # 动手码代码！
 
