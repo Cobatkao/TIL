@@ -9,13 +9,12 @@
 - [廖雪峰Javascript全栈教程](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
 - [阮一峰-JavaScript 标准参考教程（alpha）](http://javascript.ruanyifeng.com/)
 - [表严肃](http://biaoyansu.com/12.0?f=www2baidu)：讲课风趣幽默，短小精炼的课程安排，适合快速入门
----分割线---
 - [《JavaScript 闯关记》](https://github.com/stone0090/javascript-lessons)：博主提供了JS系统学习章节，及小实战项目
 - [javascript学习笔记](https://github.com/zhubangbang/zhubangbang-javascript-notes)：ECMAScript的方方面面
-- [《前端回忆录》](https://github.com/Wscats/Good-Text-Share)：涵盖前端的知识点
+- [《前端回忆录》](https://github.com/Wscats/Good-Text-Share)：涵盖前端的知识点及好文章，建议follow这位博主~
 - [Front-End-Knowledge](https://github.com/KieSun/Front-end-knowledge/blob/master/2018/3%E6%9C%88/knowledge.md)：涉及JS、CSS部分重点及react源码解析等
 - [10 个 JavaScript 难点](https://juejin.im/entry/597fedba5188255694568a9f)
-- [HTML/CSS & JavaScript, Web and related. 前端手册](https://github.com/hijiangtao/FE-Cookbook) 包含博主的读书笔记，关键概念的理解以及qi前端相关的技术文章。
+- [前端手册](https://github.com/hijiangtao/FE-Cookbook) 包含博主的读书笔记，关键概念的理解以及qi前端相关的技术文章。
 - [前端开发资源收集](http://www.code123.cc/1679.html)：内容比较多且杂，建议自我消化
 
 # 动手码代码！
