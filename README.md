@@ -8,14 +8,20 @@
 
 - [廖雪峰Javascript全栈教程](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000)
 - [阮一峰-JavaScript 标准参考教程（alpha）](http://javascript.ruanyifeng.com/)
-- [表严肃](http://biaoyansu.com/12.0?f=www2baidu)：讲课风趣幽默，短小精炼的课程安排，适合快速入门
-- [《JavaScript 闯关记》](https://github.com/stone0090/javascript-lessons)：博主提供了JS系统学习章节，及小实战项目
-- [javascript学习笔记](https://github.com/zhubangbang/zhubangbang-javascript-notes)：ECMAScript的方方面面
-- [《前端回忆录》](https://github.com/Wscats/Good-Text-Share)：涵盖前端的知识点及好文章，建议follow这位博主~
-- [Front-End-Knowledge](https://github.com/KieSun/Front-end-knowledge/blob/master/2018/3%E6%9C%88/knowledge.md)：涉及JS、CSS部分重点及react源码解析等
-- [10 个 JavaScript 难点](https://juejin.im/entry/597fedba5188255694568a9f)
-- [前端手册](https://github.com/hijiangtao/FE-Cookbook) 包含博主的读书笔记，关键概念的理解以及qi前端相关的技术文章。
+- [表严肃](http://biaoyansu.com/12.0?f=www2baidu) - 讲课风趣幽默，短小精炼的课程安排，适合快速入门
+- [stone0090 - 《JavaScript 闯关记》](https://github.com/stone0090/javascript-lessons) - 博主提供了JS系统的学习课程，闯关任务式的呈现，及小实战项目供练手
+- [zhubangbang - javascript学习笔记](https://github.com/zhubangbang/zhubangbang-javascript-notes) - 博主在找工作阶段总结的ECMAScript的方方面面
+- [Wscats - 《前端回忆录》](https://github.com/Wscats/Good-Text-Share) - 涵盖前端的知识点及好文章，建议follow这位博主的github，还有很多有用的干货~
+- [KieSun - Front-End-Knowledge](https://github.com/KieSun/Front-end-knowledge/blob/master/2018/3%E6%9C%88/knowledge.md) - 涉及JS、CSS部分重点及react源码解析等
+- [hijiangtao - FE_Cookbook](https://github.com/hijiangtao/FE-Cookbook) 包含博主的读书笔记，关键概念的理解以及前端相关的技术文章
+- [这波能反杀 - 基础进阶系列](https://yangbo5207.github.io/wutongluo/ji-chu-jin-jie-xi-lie/yi-3001-nei-cun-kong-jian-xiang-jie.html) - 文章原载于简书，后面更新成gitbook的形式，内容以Javascript进阶知识为主！
+- [汤姆大叔的博客 - 深入理解Javascript系列](http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html) - 深入理解javascript系列，包含多数JS进阶知识！
+- [王福朋 - 深入理解Javascript系列](https://www.cnblogs.com/wangfupeng1988/p/3977924.html) - 均为博主原创，该系列主要涵盖JS的两个重点部分：闭包和原型，建议学到这两块时重点学习！
 - [前端开发资源收集](http://www.code123.cc/1679.html)：内容比较多且杂，建议自我消化
+- [技术胖](http://jspang.com/) - 包含react，vue，webpack，es6等众多课程，可以重点关注
+- [Javascript秘密花园](http://bonsaiden.github.io/JavaScript-Garden/zh/#object.general) 
+- [10 个 JavaScript 难点](https://juejin.im/entry/597fedba5188255694568a9f)
+
 
 # 动手码代码！
 
