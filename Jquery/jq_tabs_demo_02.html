@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<meta name="robots" content="noindex">
+<html lang="en">
+<head>
+<meta name="description" content="jquery之tabs小实践02" />
+  <meta charset="UTF-8">
+  <title>jq_tabs_demo_1</title>
+  <style type="text/css">
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      border: 5px solid #ff4500;
+    }
+    #tabs .tab_1 {
+      width: 400px;
+      height: 200px;
+      border: 5px solid #8000ff;
+      display: none;
+    }
+    .active {
+      display: inline-block;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  </style>
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript">
+    /*$(function() {
+      $('#tabs > button').click(function() {
+
+        $('#tabs > button').attr('class', '')
+
+        $(this).attr('class', 'active')
+
+        $('#tabs > div').css('display', 'none')
+
+        $('#tabs > div').eq($(this).index()).css('display', 'block')
+      })
+    })
+    */
+
+    // 简洁版
+    // 运用了大量链式操作，每一个链条中return的还是this本身
+
+    $(function() {
+      $('#tabs > button').on('click', function() {
+        // 重点2:$(this)代表执行$这个函数同时把this作为参数传入，换句话说，每写一次就执行一次函数
+        // 为了减少函数消耗，我们保存一个函数变量
+        var $this = $(this)
+        var index = $this.index()
+        $this.attr('class', 'active').siblings().removeClass('active')
+        $this.parents('#tabs').find('.tab_1').css('display', 'none').eq(index).css('display', 'block')
+        // 重点1:链式调用，通过parents().find()来避免两个tab混乱
+      })
+    })
+
+  </script>
+</head>
+
+<body>
+  <div id="tabs">
+    <button class="tab_#1">tab_#1</button>
+    <button class="tab_#1">tab_#2</button>
+    <button class="tab_#1">tab_#3</button>
+    <div class="tab_1"><p>1th paragraph</p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+    <div class="tab_1"><p>2th paragraph</p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+    <div class="tab_1"><p>3th paragraph</p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+  </div>
+
+  <!-- 第二个一样的tab -->
+  <div id="tabs">
+    <button class="tab_#1">tab_#1</button>
+    <button class="tab_#1">tab_#2</button>
+    <button class="tab_#1">tab_#3</button>
+    <div class="tab_1"><p>1th paragraph</p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+    <div class="tab_1"><p>2th paragraph</p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+    <div class="tab_1"><p>3th paragraph</p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+  </div>
+</body>
+</html>

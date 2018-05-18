@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="原生JS之tabs小实践">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>nativeJS_tabs_demo_1</title>
+  <style type="text/css">
+  button {
+    padding: 10px 20px;
+    border: 5px solid #ff4500;
+  }
+  #tabs div {
+    width: 400px;
+    height: 200px;
+    border: 5px solid #8000ff;
+    display: none;
+  }
+  .active {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  </style>
+  <script type="text/javascript">
+    window.onload = function() {
+      var btn = document.getElementsByTagName('button')
+      var content = document.getElementsByClassName('tab_con')
+
+      for (var i = 0; i < btn.length; i++) {
+        btn[i].index = i
+
+        btn[i].onclick = function() {
+
+          for (var i = 0; i < btn.length; i++) { // 点击其他按钮时，先前按钮背景为空
+            btn[i].className = ''
+            content[i].style.display = 'none' // 隐藏掉所有选项卡
+          }
+
+          this.className = 'active'
+          content[this.index].style.display = 'block' // 根据点击按钮的索引来关联选项卡的索引，达成显示
+
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="tabs">
+    <button value="tab_#1">tab_#1</button>
+    <button value="tab_#1">tab_#2</button>
+    <button value="tab_#1">tab_#3</button>
+    <div class="tab_con"><p>1th paragraph</p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+    <div class="tab_con"><p>2th paragraph</p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+    <div class="tab_con"><p>3th paragraph</p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
+  </div>
+</body>
+</html>
