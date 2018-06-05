@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Easy Tabs</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #f06d06;
+      padding-top: calc((100% - 400px) / 4);
+      padding-bottom: calc((100% - 400px) / 4);
+    }
+    #ct {
+      background-color: #fff;
+      height: 400px;
+      width: 60%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      resize: both;
+      overflow: auto;
+    }
+    #box {
+      width: 50%;
+      border: 2px solid #000;
+      /*padding: 20px;*/
+      background: #ccc;
+      color: #fff;
+      resize: both;
+      overflow: auto;
+    }
+    #tab {
+      width: 100%;
+      display: block;
+      background-color: #333;
+      overflow: hidden;
+    }
+    #tab li {
+      float: left;
+      list-style: none;
+      height: 40px;
+      width: (100% / 3);
+      background-color: #555;
+      line-height: 40px;
+      text-align: center;
+    }
+    #tab li a {
+      text-decoration: none;
+      color: #fff;
+      padding: 0 40px;
+    }
+    #tab li.special {
+      background-color: #f06d06;
+    }
+    #tab li.special a {
+      color: #333;
+      font-weight: bold;
+    }
+    #text {
+      display: block;
+      width: 100%;
+      height: 300px;
+      text-align: center;
+      line-height: 300px;
+      font-size: 48px;
+      color: #333;
+    }
+    #text > div {
+      display: none;
+    }
+    #text div.appear {
+      display: block;
+    }
+  </style>
+  <script type="text/javascript">
+    window.onload = function() {
+      var tab = document.getElementById('tab')
+      var text = document.getElementById('text')
+      var li = tab.getElementsByTagName('li')
+      var con = text.getElementsByTagName('div')
+
+      for (var i = 0; i < li.length; i++) {
+        li[i].index = i
+        li[i].onclick = function() {
+          for (var i = 0; i < li.length; i++) {
+            li[i].className = ''
+            con[i].className = ''
+          }
+          this.className = 'special'
+          con[this.index].className = 'appear'
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="ct">
+    <div id="box">
+      <ul id="tab">
+        <li class="special"><a href="#">新闻</a></li>
+        <li><a href="#">音乐</a></li>
+        <li><a href="#">视频</a></li>
+      </ul>
+      <div id="text">
+        <div class="appear"><p>新闻正文</p></div>
+        <div><p>音乐歌曲</p></div>
+        <div><p>内涵视频</p></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

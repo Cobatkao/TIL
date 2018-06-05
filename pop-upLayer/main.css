@@ -1,0 +1,320 @@
+/* CSS reset */
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{ margin: 0; padding: 0; }
+fieldset,img{ border: 0; margin: 0; padding: 0;}
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
+#header {
+  font-family: '微软雅黑'
+  height: 60px;
+  background-color: #2A2C2E;
+}
+#logo {
+  background: url(https://i.loli.net/2018/06/02/5b121c76eb22c.png
+) #BA454E;
+  width: 250px;
+  height: 80px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#logo a{
+  display:block;
+  width:220px;
+  height:80px;
+  line-height:80px;
+  text-indent:-200%;
+  overflow:hidden;
+}
+#nav{
+  height:60px;
+  margin:0 auto;
+  background:#2a2c2e;
+  position:relative;
+  z-index:99
+}
+#nav-item {
+  margin: 0 0 0 280px;
+}
+#nav-item > li {
+  list-style-type: none;
+  float: left;
+  font-size: 14px;
+}
+#nav-item > li > a {
+  color: #B5BDC0;
+  text-decoration: none;
+  display: block;
+  padding: 20px 35px;
+}
+#nav-item > li > a:hover {
+  text-shadow:1px 1px 3px #666;
+  color: #fff;
+}
+
+#login-area {
+  float: right;
+  position: relative;
+  height: inherit;
+  line-height: 60px;
+}
+.login-button {
+  font-size: 14px;
+  color: #fff;
+  background-color: #BA454E;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  opacity: .85;
+  cursor: pointer;
+}
+.login-button:hover {
+  opacity: 1;
+}
+
+#slider {
+  list-style:none;
+  position:relative;
+  overflow:hidden;
+  width:100%;
+}
+#discripcontainer {
+  width: 980px;
+  height: 600px;
+  position: absolute;
+  left: calc((100% - 960px)/2);
+  top: 300px;
+}
+#discripcontainer .discripbg {
+  width: 400px;
+  height: 230px;
+  background: rgba(0, 0, 0, .4);
+  /*opacity: 0.7;
+  filter: opacity(70%);*/
+  border-left: 4px solid #F36;
+  z-index: 10;
+}
+.discrip {
+  font-family: monospace;
+  padding: 10px 25px;
+  z-index: 20;
+  color: #fff;
+}
+.discrip h2 {font-size:40px; margin:11px 0 14px; font-weight:100}
+.discrip h3 {font-size:24px; font-weight:100;}
+.discrip h4 {font-size:20px; font-weight:100;}
+.discrip h2, .discrip h3, .discrip h4 {
+  opacity: 0.9;
+  filter: opacity(90%);
+  }
+.btnarea {
+  margin-top:15px;
+}
+.btnarea a {
+  text-decoration: none;
+  color: #fff;
+}
+#enterbtn {
+  width: 150px;
+  height: 50px;
+  background:#c9394a;
+  font-size:20px;
+  display:block;
+  text-align:center;
+  line-height:50px;
+  color: #fff;
+  float: left;
+  margin-right: 15px;
+}
+#enterbtn:hover {
+  background:#e35061
+}
+#learnmore {
+  width: 150px;
+  height: 50px;
+  background:#64554C;
+  font-size:20px;
+  display:block;
+  text-align:center;
+  line-height:50px;
+  float: left;
+}
+#learnmore:hover {
+  background-color: #666;
+}
+
+#slider li#bg {
+  width: 100%;
+  text-align: center;
+  height: 600px;
+  background:url(https://i.loli.net/2018/06/02/5b12277649d25.jpg) center top no-repeat;
+}
+
+#freshcourse h2{
+background:url(img/freshtit.png) left top no-repeat #2a2c2e;
+height:100px;
+padding:0
+}
+
+#freshcourse ul  {
+padding-top:20px;
+list-style:none;
+font-family:"微软雅黑";
+overflow:hidden;
+height:650px;}
+
+#freshcourse ul li,#freshcourse p,#freshcourse h5{
+-webkit-transition: 0.25s;
+-moz-transition: 0.25s;
+-o-transition: 0.25s;
+transition: 0.25s;
+}
+
+#freshcourse ul li {
+float:left;
+width:300px;
+background:#fff;
+margin:0 40px 20px 0;
+padding-bottom:5px;
+-moz-border-radius:3px 3px 3px 3px;
+-webkit-border-radius:3px 3px 3px 3px;
+border-radius:3px 3px 3px 3px;
+box-shadow:0 1px 1px #ccc;
+
+}
+
+#freshcourse ul li:hover{
+box-shadow:0 3px 10px #999
+}
+#freshcourse ul li a:hover{
+display:block;
+overflow:hidden;
+}
+#freshcourse ul li a:hover h5{
+color:#c30;
+text-decoration:underline
+}
+#freshcourse ul li a:hover p{
+color:#666
+}
+#freshcourse ul li.mr0 {
+margin-right:0
+}
+
+#freshcourse ul li img{
+  border-bottom:4px solid #c9394a;
+  margin:10px 10px 0 10px
+}
+
+#freshcourse h5 {
+  font-size:16px; color:#52585a; padding:0px 14px;
+}
+#freshcourse p {
+color: #B5BDC0;
+  font-size: 12px;
+  height: 30px;
+  line-height: 1.6;
+  overflow: hidden;
+  padding: 0 6px 10px 14px;
+
+  }
+#freshcourse .tips {  padding:0 14px; font-size:12px; color:#8e999d; overflow:hidden;zoom:1}
+#joinus {
+background:#2a2c2e;
+height:360px;
+clear:both;
+}
+#joinus h2 {
+text-align:center;
+color:#606465;
+margin-top:0;
+padding-top:40px}
+#joinus ul {
+padding:30px 0 0 100px;
+list-style:none;
+overflow:hidden;
+zoom:1}
+#joinus ul li {
+float:left;
+width:200px;
+margin-right:15px;
+cursor:pointer;
+color:#52585a;
+height:90px;
+border-radius:90px;
+-webkit-transition: 0.25s;
+-moz-transition: 0.25s;
+-o-transition: 0.25s;
+transition: 0.25s;}
+#joinus ul li:hover, #joinus ul li.active {
+background:#fff;
+box-shadow:0 0 3px #ccc}
+#joinus ul li:hover .pics ,#joinus ul li.active .pics{
+opacity:1}
+
+#joinus ul li .pics {
+float:left;
+margin-right:10px;
+opacity:.8}
+#joinus h5 {
+margin:17px 0 -6px;
+font-size:14px;}
+#joinus p {
+color:#8e999d;
+font-size:12px}
+
+#speak {
+position:relative;
+border:3px solid #c9394a;
+width:870px;
+margin:40px auto 0;
+background:#404243;
+font-size:15px; height:50px;
+padding:15px 30px;
+font-family:"微软雅黑";
+color:#b5bdc0;
+line-height:1.6
+}
+.arrowdown {
+display:block;
+width:0;
+height:0;
+border-width:13px;
+border-color:#c9394a transparent transparent  transparent;
+border-style:solid dashed dashed  dashed;
+overflow:hidden;
+position:absolute;
+top:100%;
+left:106px}
+
+.arrowdown-white{
+border-color:#fff transparent transparent  transparent;
+
+}
+
+#icons {
+position:relative;
+box-shadow:0 2px 2px #daddde;
+width:870px;
+margin:42px auto;
+background:#fff;
+font-size:15px;
+padding:30px 30px 30px;
+font-family:"微软雅黑";
+color:#8e999d;
+text-align:center;}
+#icons .arrowdown-png {
+   background: url("../img/sprit.png") no-repeat scroll -2px 0 rgba(0, 0, 0, 0);
+  bottom: -15px;
+  display: block;
+  height: 15px;
+  left: 50%;
+  margin-left: -20px;
+  position: absolute;
+  width: 35px;
+  }
+.icontit {  padding:15px 30px 0 34px; overflow:hidden}
+.icontit h3 {  float:left; text-align:left; font-size:20px; width:305px; font-weight:100}
+.icontit h3.last {  width:178px; float:right; text-align:center}
