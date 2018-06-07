@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="decription" content="一段文本过长就变成省略号的例子">
+    <title>justify demo</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .ct {
+        /* border: 1px solid green; */
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+      }
+      input {
+        height: 24px;
+        vertical-align: middle;
+      }
+      label {
+        /* border: 1px solid red; */
+        text-align: justify;
+        display: inline-block;
+        width: 5em;
+        height: 2em;   
+        line-height: 2em;
+        overflow: hidden;
+        margin-right: 5px;
+        float: left;
+      }
+      label::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 0;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="ct">
+      <label>姓名</label><input type="text" placeholder="请输入姓名"> <br />
+      <label>联系方式</label><input type="text" placeholder="请输入联系方式">
+    </div>
+  </body>
+</html>
