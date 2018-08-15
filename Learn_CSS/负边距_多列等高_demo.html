@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>多列等高_demo</title>
+  <style type="text/css">
+  /* 采用padding补偿法
+   * 把两列的padding-bottom设为超大值，再用margin-bottom的相等的负值抵消掉padding-bottom
+   * 父容器再设置超出隐藏
+  */
+    * { padding: 0; margin: 0; color: gainsboro; }
+    .container {
+      margin: 0 auto;
+      border: 2px solid green;
+      width: 800px;
+      overflow: hidden;
+    }
+    .left {
+      width: 250px;
+      background-color: blueviolet;
+      float: left;
+      padding-bottom: 2000px;
+      margin-bottom: -2000px;
+    }
+    .right {
+      width: 550px;
+      background-color: brown;
+      float: left;
+      padding-bottom: 2000px;
+      margin-bottom: -2000px;
+    }
+    .container::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">我是left</div>
+    <div class="right">
+      我是right<br><br><br><br>
+      我是right的最下层！！我的高度比较高，所以超过了left！
+      我们现在多列等高啦！
+    </div>
+  </div>
+</body>
+</html>

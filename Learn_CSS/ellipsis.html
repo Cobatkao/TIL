@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="decription" content="一段文本过长就变成省略号的例子">
+  <title>ellipsis demo</title>
+  <style>
+    .dad {
+      border: 1px solid green;
+      width: 12em;
+    }
+    .son {
+      /* 下三行是实现的关键 */
+      text-overflow: ellipsis; 
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .son:hover {
+      text-overflow: inherit;
+      overflow: visible;
+    }
+  </style>
+</head>
+<body>
+  <div class="dad">
+    <div class="son">媽構保德太就問流社帶喜地論體做底動影說這，中情快！另他許黨我產方感活又前打世供學士：轉十因門北民歌賽那出年帶！法北農政銀化速生電、一生國求吃木用是輕近大當不上。用要由治小會人達到隨用想的灣三星我起能其年種城度會倒讀經味由。格沒健世？當正氣故子來花，二機母化從不得果得子你下得。傳就知她畫重業中化應公廣微在成們義白，車容展國吃親自易語害，身了酒真加明很陽候力以期們力報學位、止具我是高子系過工意灣處族常河有通夠用建合們；太統他。名中原題初汽言使員門發言著不沒生設接充小球很自背……大賣十子……少只過下曾現與心的得友。</div>
+  </div>
+</body>
+</html>
