@@ -1,0 +1,95 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+    ul > li {
+      width: 100px;
+      height: 30px;
+      text-align: center;
+      display: block;
+      list-style-type: none;
+      border: 1px solid #000;
+      padding: 10px 20px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <ul id="up">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+  </ul>
+  <script>
+      var ul = document.querySelector("#up")
+      console.log(ul)
+      var li = document.querySelectorAll('li')
+      console.log(li)
+      li.forEach(function(item) {
+        item.addEventListener('click', function(e) {
+          console.log(e.target) //触发事件的具体对象
+          console.log(e.currentTarget) //绑定事件的对象
+          alert(e.target.value)
+        })
+      })
+    </script>
+</body>
+</html> -->
+
+
+<!-- 冒泡：如下我在父元素#test与子元素li均绑定了click事件，那么”click”事件会依次在它的父级元素中被触发 
+     下面demo，单击任意test，会先触发「触发事件」的元素自身的事件，再冒泡到#test触发它上的事件
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+    ul > li {
+      width: 100px;
+      height: 30px;
+      text-align: center;
+      display: block;
+      list-style-type: none;
+      border: 1px solid #000;
+      padding: 10px 20px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="test" onclick="alert('div-test')">
+    <ul id="up">
+      <li>1
+          <li>2
+              <li>3</li>
+          </li>
+      </li>
+      
+      
+      <!-- <li>4</li>
+      <li>5</li>
+      <li>6</li> -->
+    </ul>
+  </div>
+  <script>
+      var ul = document.querySelector("#up")
+      console.log(ul)
+      var li = document.querySelectorAll('li')
+      console.log(li)
+      
+      li.forEach(function(item) {
+        item.addEventListener('click', function() {
+          alert(item.innerText)
+        })
+      })
+    </script>
+</body>
+</html>

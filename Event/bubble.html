@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="点击btn让box显示，点击空白让其隐藏；
+  这里如果不阻止冒泡，那么首先btn触发点击事件，盒子显示；由于box包含于document，所以会向上冒泡继而
+  触发document的事件，盒子又消失了" />
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+    #box {
+      width: 300px;
+      height: 300px;
+      background: #ccc;
+      margin-top: 20px;
+      display: none;
+    }
+    #btn {
+      padding: 10px 20px;
+      font-weight: 900;
+      font-size: 32px;
+      border: 3px solid black;
+      outline: none;
+    }
+  </style>
+  <script type="text/javascript">
+    window.onload = function() {
+      var btn = document.querySelector('#btn');
+      var box = document.querySelector('#box')
+
+      btn.addEventListener('click', function(e) {
+        var e = e || window.event //兼容性写法
+        //点击btn，box出现
+        box.style.display = 'block'
+        window.event? window.event.cancelBubble = true : e.stopPropagation(); //阻止冒泡兼容性写法，前者IE，后者W3C
+      })
+      
+      //点击空白区域box隐藏
+      document.onclick = function() {
+        box.style.display = "none"
+      }
+    
+      
+      //阻止冒泡的另一种写法
+      //function stopBubble(e) { 
+      //  if(e && e.stopPropagation) { //非IE 
+      //  e.stopPropagation(); 
+      //    } else { //IE 
+      // window.event.cancelBubble = true; 
+      //  } 
+      //} 
+
+      // 阻止默认事件写法
+      // function preventDefa(e){ 
+      // if(window.event){ 
+      //  //IE中阻止函数器默认动作的方式  
+      //  window.event.returnValue = false;  
+      //  } 
+      //  else{ 
+          //阻止默认浏览器动作(W3C)  
+      //  e.preventDefault(); 
+      //  }  
+      
+      // 如果只要兼容高版本浏览器，如下
+      // btn.onclick = function (){ 
+      //   return false; 
+      // }
+      }
+    }
+  </script>
+</head>
+<body>
+  <input type="button" id="btn" value="测试">
+  <div id="box">看这里</div>
+</body>
+</html>
