@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>多列等高_demo</title>
+  <style type="text/css">
+  /* 采用<padding补偿法>
+   * step1. 把每一列的<padding-bottom>设为超大值，再用<margin-bottom>的相等的负值抵消掉padding-bottom
+   * step2. 父容器再设置overfolow:hidden，在同个容器中，随着一列高度增加其它列也会增加，达到多列等高效果
+  */
+    * { padding: 0; margin: 0; color: gainsboro; }
+    .container {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .left {
+      width: 250px;
+      background-color: blueviolet;
+      float: left;
+    }
+    .right {
+      width: 450px;
+      background-color: brown;
+      float: right;
+    }
+    .main {
+      background-color: chocolate;
+      margin: 0 460px 0 260px;
+      text-align: center;
+    }
+    .main, .left, .right {
+      padding-bottom: 2000px;
+      margin-bottom: -2000px;
+    }
+    .container::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      我是left！Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.我们现在多列等高啦！
+    </div>
+    <div class="right">
+        我的高度比较高，所以超过了left！我们现在多列等高啦！我的高度比较高，所以超过了left！我们现在多列等高啦！我的高度比较高，所以超过了left！我们现在多列等高啦！我的高度比较高，所以超过了left！我们现在多列等高啦！我的高度比较高，所以超过了left！我们现在多列等高啦！我的高度比较高，所以超过了left！我们现在多列等高啦！我的高度比较高，所以超过了left！我们现在多列等高啦！
+    </div>
+    <div class="main">
+      我是main！我是right的最下层！！
+    </div>
+  </div>
+</body>
+</html>
