@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>进度条动画demo</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.interval,
+		.setTimeout,
+		.requestAnimationFrame {
+			background: #ddd;
+			width: 100vw;
+			height: 33vh;
+			border-bottom: 3px solid #333;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			padding-left: 30px;
+		}
+
+		#progressblock {
+			background-color: blue;
+			width: 0;
+			height: 30px;
+			line-height: 20px;
+		}
+
+		#showbar {
+			background-color: red;
+			width: 0;
+			height: 20px;
+			line-height: 20px;
+		}
+
+		#progressbar {
+			background-color: orange;
+			width: 0;
+			height: 25px;
+			line-height: 20px;
+		}
+
+		#btnInterval,
+		#btnSetTimeout,
+		#btnRaf {
+			padding: 5px 10px;
+			border-radius: 10px;
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- 使用setInterval、setTimeout和requestAnimationFrame这三个方法制作一个简单的进制度效果 -->
+	<div class="interval">
+		<button id="btnInterval">(interval)Let's run</button>
+		<div id="showbar"></div>
+	</div>
+	<div class="setTimeout">
+		<button id="btnSetTimeout">setTimeout let's run</button>
+		<div id="progressblock"></div>
+	</div>
+	<div class="requestAnimationFrame">
+		<button id="btnRaf">requestAnimationFrame let's run</button>
+		<div id="progressbar"></div>
+	</div>
+
+	<script>
+		var timer
+		btnInterval.onclick = function() {
+			showbar.style.width = '0'
+			timer = setInterval(function() {
+				if (parseInt(showbar.style.width, 10) < 800) {
+					showbar.style.width = parseInt(showbar.style.width, 10) + 5 + 'px'
+					showbar.innerHTML = (parseInt(showbar.style.width, 10) / 8).toFixed(1) + '%'
+				} else {
+					clearInterval(timer)
+				}
+			}, 16);
+		}
+
+		var timer2
+		btnSetTimeout.addEventListener('click', function() {
+			progressblock.style.width = '0'
+			timer2 = setTimeout( function fn() {
+				if(parseInt(progressblock.style.width, 10) < 800) {
+					progressblock.style.width = parseInt(progressblock.style.width, 10) + 5 + 'px'
+					progressblock.innerHTML = (parseInt(progressblock.style.width, 10) / 8)
+					timer2 = setTimeout(fn, 16)
+				} else {
+					clearTimeout(timer2)
+				}
+			}, 16)
+		}, false)
+
+		var timer1
+		btnRaf.addEventListener('click', function() {
+			progressbar.style.width = '0'
+			timer1 = requestAnimationFrame(function test() {
+				if(parseInt(progressbar.style.width, 10) < 800) {
+					progressbar.style.width = parseInt(progressbar.style.width, 10) + 5 + 'px'
+					progressbar.innerHTML = (parseInt(progressbar.style.width, 10) / 8)
+						.toFixed(1) + '%'
+					timer1 = window.requestAnimationFrame(test)
+				} else {
+					window.cancelAnimationFrame(timer1)
+				}
+			})
+		}, false)
+	</script>
+</body>
+</html>
