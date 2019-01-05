@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>简易接口demo</title>
+  <style>
+    label, .ct {
+      display: block;
+    }
+    label > span {
+      width: 50px;
+      height: 30px;
+      display: inline-flex;
+    }
+  </style>
+</head>
+
+<body>
+  <label for="user">
+    <span>用户名</span>
+    <input type="text" name="user" id="user">
+  </label>
+  <label for="passowrd">
+    <span>密码</span>
+    <input type="password" id="password">
+  </label>
+  <div class="ct">
+    <input type="button" value="注册" id="regBtn">
+    <input type="button" value="登录" id="loginBtn">
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    var oTxtUser = document.getElementById('user')
+    var oTxtPass = document.getElementById('password')
+    var oBtnReg = document.getElementById('regBtn')
+    var oBtnLogin = document.getElementById('loginBtn')
+
+    $(oBtnReg).on('click', function() {
+      $.ajax({
+        url: '/user',
+        data: {
+          act: 'register',
+          user: oTxtUser.value,
+          password: oTxtPass.value
+        },
+        type: "GET",
+        success: function(data) {
+          var json = eval('(' + data + ')')
+          if (json.ok) {
+            alert('注册成功！')
+          } else {
+            alert('注册失败！' + json.msg)
+          }
+        },
+        error: function() {
+          alert('连接错误！')
+        }
+      })
+    })
+
+    $(oBtnLogin).on('click', function() {
+      $.ajax({
+        url: '/user',
+        data: {
+          act: 'login',
+          user: oTxtUser.value,
+          password: oTxtPass.value
+        },
+        type: "GET",
+        success: function(data) {
+          var json = eval('(' + data + ')')
+          if (json.ok) {
+            alert('登录成功！')
+          } else {
+            alert('登录失败！' + json.msg)
+          }
+        },
+        error: function() {
+          alert('连接错误！')
+        }
+      })
+    })
+  </script>
+</body>
+
+</html>
