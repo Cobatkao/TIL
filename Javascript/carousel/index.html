@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>轮播</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    a {
+      color: #ccc;
+      text-decoration: none;
+    }
+    #ct {
+      width: 600px;
+      height: 400px;
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto;
+      transform: translateY(50%);
+    }
+    #list {
+      width: 4200px;
+      height: 400px;
+      position: absolute;
+      z-index: 1;
+    }
+    #list > img {
+      float: left;
+    }
+    #btn {
+      position: absolute;
+      bottom: 20px;
+      z-index: 2;
+      left: 250px;
+      width: 100px;
+      height: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+    #btn > span {
+      cursor: pointer;
+      float: left;
+      border: 1px solid #fff;
+      width: 10px;
+      height: 10px;
+      background: #333;
+      border-radius: 50%;
+    }
+    #btn > .colored {
+      background: orangered;
+      border: 1px solid orangered;
+    }
+    .arrow {
+      cursor: pointer;
+      position: absolute;
+      display: none;
+      z-index: 2;
+      top: 182px;
+      font-size: 26px;
+      font-weight: 200;
+      padding: 0 10px;
+      line-height: 36px;
+      color: #fff;
+      background: rgba(0, 0, 0, .2);
+    }
+    .arrow:hover {
+      background: rgba(0, 0, 0, .4);
+    }
+    #ct:hover .arrow {
+      display: block;
+    }
+    .toLeft {
+      left: 20px;
+    }
+    .toRight {
+      right: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="ct">
+    <!-- 轮播图片 -->
+    <div id="list" style="left: -600px;">
+      <img src="https://dummyimage.com/600x400/f4e241/fff.png&text=Fifth" alt="">
+      <img src="https://dummyimage.com/600x400/a68ab0/fff.png&text=First" alt="">
+      <img src="https://dummyimage.com/600x400/4286f4/fff.png&text=Second" alt="">
+      <img src="https://dummyimage.com/600x400/b841f4/fff.png&text=Third" alt="">
+      <img src="https://dummyimage.com/600x400/77686a/fff.png&text=Fourth" alt="">
+      <img src="https://dummyimage.com/600x400/f4e241/fff.png&text=Fifth" alt="">
+      <img src="https://dummyimage.com/600x400/a68ab0/fff.png&text=First" alt="">
+    </div>
+    <!-- 切换按钮 -->
+    <div id="btn">
+      <span data-index="1" class="colored"></span>
+      <span data-index="2"></span>
+      <span data-index="3"></span>
+      <span data-index="4"></span>
+      <span data-index="5"></span> 
+    </div>
+    <!-- 箭头 -->
+    <a class="arrow toLeft" href="#">&lt;</a>
+    <a class="arrow toRight" href="#">&gt;</a>
+  </div>
+  <script>
+    window.onload = function() {
+      let ct = document.getElementById('ct')
+      let list = document.getElementById('list')
+      let btns = document.querySelectorAll('#btn > span')
+      let prev = document.getElementsByClassName('toLeft')[0]
+      let next = document.getElementsByClassName('toRight')[0]  
+      var index = 1
+      var animStatus = false
+      var timer
+
+      //圆点变色函数
+      function coloredBtn() {
+        for (let i = 0; i < btns.length; i++) {
+          if (btns[i].classList.contains('colored')) {
+            btns[i].classList.remove('colored')
+            break
+          }
+        }
+        btns[index - 1].classList.add("colored")
+        
+      }
+
+      //滚动函数
+      function slide(offset) {
+        animStatus = true
+        var nLeft = parseInt(list.style.left) + offset
+        var time = 300 //位移总时长
+        var interval = 10 //单次位移间隔时间
+        var speed = offset / (time / interval) //每次位移量
+
+        function goSmooth() {
+          if ((speed < 0 && parseInt(list.style.left) > nLeft) || (speed > 0 && parseInt(list.style.left) < nLeft)) {
+            list.style.left = parseInt(list.style.left) + speed + 'px'
+            setTimeout(goSmooth, interval) //递归
+          } else {
+            animStatus = false //动画暂停
+            //归位，并判断是否移动到辅助图
+            list.style.left = nLeft + 'px'
+            if (nLeft > -600) {
+              list.style.left = -3000 + 'px'
+            }
+            if (nLeft < -3000) {
+              list.style.left = -600 + 'px'
+            }
+          }
+        }
+        goSmooth()
+      }
+      
+      //自动切换函数
+      function autoPlay() {
+        timer = setInterval(function() {
+          next.click()
+        }, 1000)
+      }
+
+      //停止自动播放
+      function stopPlay() {
+        window.clearInterval(timer)
+      }
+
+      autoPlay() //默认自动播放
+
+      ct.addEventListener('mouseover', stopPlay)
+
+      ct.addEventListener('mouseout', autoPlay)
+
+      next.addEventListener('click', function(e) {
+        e.preventDefault()
+        if (index >= 5) {
+          index = 1
+        } else {
+          index += 1
+        }
+        coloredBtn()
+        if (!animStatus) {
+          slide(-600)
+        }
+      })
+
+      prev.addEventListener('click', function(e) {
+        e.preventDefault()
+        if (index <= 1) {
+          index = 5
+        } else {
+          index -= 1
+        }
+        coloredBtn()
+        if (!animStatus) {
+          slide(600)
+        }
+      })
+
+      //给圆点加事件
+      for (let i = 0; i < btns.length; i++) {
+        btns[i].addEventListener('click', function(e) {
+          if (this.classList.contains('colored')) {
+            return
+          }
+          var myIndex = parseInt(this.getAttribute('data-index'))
+          var offset = -600 * (myIndex - index)
+          if (!animStatus) {
+            slide(offset)
+          }
+          index = myIndex
+          coloredBtn()
+        })
+      }
+    }
+  </script>
+</body>
+</html>
