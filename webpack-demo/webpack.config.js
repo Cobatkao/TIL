@@ -8,31 +8,31 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const WEBPACK_ENV = process.env.WEBPACK_ENV || "dev";
 
 // 获取html-webpack-connfig参数的方法
-const getHtmlConfig = function(name, title) {
-  return {
-    template: "./src/" + name + ".html",
-    filename: name + ".html",
-    favicon: "./favicon.ico",
-    title: title,
-    inject: true,
-    hash: true,
-    chunks: ["common", name]
-  };
-};
+// const getHtmlConfig = function(name, title) {
+//   return {
+//     template: "./src/" + name + ".html",
+//     filename: name + ".html",
+//     favicon: "./favicon.ico",
+//     title: title,
+//     inject: true,
+//     hash: true,
+//     chunks: [name]
+//   };
+// };
 
 const config = {
   mode: 'production',
   entry: {
-    main: ['./src/index.js'],
+    index: ['./src/index.js'],
   },
   devServer: {
-    contentBase: './dist',
+    contentBase: './dist',                                                                                                                                                                                                                                                                                                  
     open: 'true',
     hot: true,
     // hotOnly: true
   },
   output: {
-    filename: "js/[name].[hash:8].js",
+    filename: "js/[name].[hash:8].bundle.js",
     path: path.resolve(__dirname, "dist"),
     publicPath: ""
   },
@@ -60,13 +60,14 @@ const config = {
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin(
-      getHtmlConfig(
-        "index",
-        "测试打包"
-      )
-    ),
     new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'webpack打包测试',
+      template:'src/index.html',
+      filename:'[name]_bundle.html',
+      chunks: ['index']
+    }),
+    
   ]
 };
 
