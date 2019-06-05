@@ -1,0 +1,82 @@
+doctype html
+html(lang="en")
+  head
+    title pageTitle
+    //引入其他文档，注意地址相对以当前编辑文件，pug文件之外
+      的文件类型只会被当作纯文本引入
+    style
+      include ./style.css
+    block scripts
+      include ./extra.pug
+      script(src='/vue.js')
+  body
+    block content
+      h2 PUG笔记
+      //插值语法1
+      - const name = 'Isaac Kao'; const time = 10
+      div
+        | 第一次使用PUG的demo
+        p #{name}已经有#{time}个月的开发经验了，才发现Pug实在太棒了！
+      //插值语法2
+      div
+        | 消除特殊符号转译
+        - const code = `<code>Hello World</code>`
+        p !{code}
+      //插值语法3
+      div
+        | 插入标签语法
+        p this is a pug #[code 插入标签语法]
+      // ---------------------------------------------
+      //属性语法1
+      div
+        - var url = 'baidu.com';
+        a(class='button', href=`http://${url}`) 百度
+      //属性语法2，使用&attributes
+      div
+        p#para&attributes({"A": "a", "B": "b"})
+      //属性语法3
+      div
+        - var authenticated = false;
+        body(class=authenticated ? 'authed' : 'anon')
+      //属性语法4
+      div
+        - var classes = ['foo', 'bar', 'baz']
+        a.bang(class=classes class=['bing'])
+      //属性语法5
+      p
+        a(style={color: 'red', background: 'green'})
+      // ---------------------------------------------
+      //分支语句，类似于switch语句
+      - var friends = 1
+      case friends
+        when 0
+        when 1
+          p 您的朋友很少
+        default
+          p 您有 #{friends} 个朋友
+      // ---------------------------------------------
+      -
+        var list = ["Uno", "Dos", "Tres",
+                "Cuatro", "Cinco", "Seis"]
+      each item, index in list
+        li #{item} is at #{index}
+      // --------------------------------------------
+      //条件判断语句，和javascript很相似
+      - var user = { isSuccss: true, description: 'foo bar baz' }
+      - var authorised = false
+      #user
+        if user.isSuccss
+          h2.green 描述
+          p.description= user.description
+        else if authorised
+          h2.blue 描述
+          p.description.
+            用户没有添加描述。
+            不写点什么吗……
+        else
+          h2.red 描述
+          p.description 用户没有描述
+    block foot
+      #footer
+        | 这里是
+        p 一些页脚内容
