@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vue test</title>
+	<script type="text/javascript" src="lib/vue.js"></script>
+</head>
+<body>
+	<div class="app">
+        <div ref="contentDiv">{{content}}</div>
+        <div>在nextTick执行前获取内容:{{content1}}</div>
+        <div>在nextTick执行之后获取内容:{{content2}}</div>
+        <div>在nextTick执行前获取内容:{{content3}}</div>
+    </div>
+	<script type="text/javascript">
+    export default {
+        name:'App',
+        data: {
+            content: 'Before NextTick',
+            content1: '',
+            content2: '',
+            content3: ''
+        },
+        methods: {
+            changeContent () {
+                this.content = 'After NextTick' // 在此处更新content的数据
+                this.content1 = this.$refs.contentDiv.innerHTML //获取DOM中的数据
+                this.$nextTick(() => {
+                    // 在nextTick的回调中获取DOM中的数据
+                    this.content2 = this.$refs.contentDiv.innerHTML 
+                })
+                this.content3 = this.$refs.contentDiv.innerHTML
+            }
+        },
+        mount () {
+            this.changeContent()
+        }
+    }
+</script>
+</body>
+</html>

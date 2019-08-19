@@ -23,7 +23,7 @@ xhr.onreadystatechange = function() {
 }
 // 发生错误时触发error事件
 xhr.onerror = function() {
-    console.log(服务器出现异常！)
+    console.log('服务器出现异常！')
 }
 //step4. 发送请求，请求被分派到服务器
 xhr.send()
