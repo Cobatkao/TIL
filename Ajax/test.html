@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>首页</title>
+	<style type="text/css">
+		#btn { padding: 5px; border-radius: 3px; color: #999; }
+		h5 { color: blue; font-weight: 500; }
+		h5 > #amount { color: red; }
+	</style>
+</head>
+<body>
+	<h5>您的账户余额是 <span id="amount">&&&amount&&&</span></h5>
+	<button id="btn">付款一元钱</button>
+	<script type="text/javascript">
+		window.callback = function(t) {
+			alert(`调用事先定义好的callback！\n ${t}`)
+		}
+
+		btn.addEventListener('click', (e) => {
+			let script = document.createElement('script')
+			//创建script后，请求src路径
+			//然后调用服务端代码中write的内容
+			script.src = 'http://isaac.com/pay'
+			document.body.appendChild(script)
+			script.onload = function(e) {
+				alert('success')
+				e.currentTarget.remove()
+			}
+			script.onerror = function() {
+				alert('fail')
+				e.currentTarget.remove()
+			}
+		})
+	</script>
+</body>
+</html>
