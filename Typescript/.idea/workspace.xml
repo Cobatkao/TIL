@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e7e6fb45-db65-4b0b-bdda-19fea1747dd3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Typescript.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Class.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vue.js/发布订阅模式/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vue.js/发布订阅模式/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vue.js/发布订阅模式/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vue.js/发布订阅模式/.idea/发布订阅模式.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vue.js/发布订阅模式/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Vue.js/异步组件/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-cli-demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-cli-demo/.prettierrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-cli-demo/cli3-demo/.browserslistrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-cli-demo/cli3-demo/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-cli-demo/cli3-demo/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-cli-demo/cli3-demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-cli-demo/cli3-demo/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-cli-demo/cli3-demo/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-cli-demo/cli3-demo/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-cli-demo/cli3-demo/postcss.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-cli-demo/cli3-demo/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-cli-demo/cli3-demo/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-cli-demo/cli3-demo/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-cli-demo/cli3-demo/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-cli-demo/cli3-demo/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-cli-demo/cli3-demo/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-cli-demo/cli3-demo/src/router.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-cli-demo/cli3-demo/src/store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-cli-demo/cli3-demo/src/views/About.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-cli-demo/cli3-demo/src/views/Home.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vue-cli-demo/cli3-demo/yarn.lock" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Class.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/index.ts" />
+        <option value="$PROJECT_DIR$/interface.ts" />
+        <option value="$PROJECT_DIR$/Class.ts" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="6" />
+    <option name="y" value="23" />
+    <option name="width" value="1026" />
+    <option name="height" value="836" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Typescript" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Typescript" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.TypeScript" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e7e6fb45-db65-4b0b-bdda-19fea1747dd3" name="Default Changelist" comment="" />
+      <created>1569487796124</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569487796124</updated>
+      <workItem from="1569487797395" duration="8806000" />
+      <workItem from="1569859220861" duration="224000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="9030000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="6" y="23" width="1026" height="836" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1681592" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="9" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.17032968" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/interface.js" />
+        <option value="$PROJECT_DIR$/Class.js" />
+      </list>
+    </option>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="52" column="39" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es2015.iterable.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1264">
+          <caret line="92" column="40" lean-forward="true" selection-start-line="92" selection-start-column="40" selection-end-line="92" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="63" column="16" lean-forward="true" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Class.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
